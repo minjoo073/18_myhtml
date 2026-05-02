@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/폰트.css">
+    <script src="script/action.js"></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+</head>
+<body>
+    <header class="container">
+        <div class="topset">
+            <div class="login_box">
+                <div class="login">
+                    <a href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                    <a href="#">EN</a>
+                </div>
+                <div class="logout">
+                    <a href="#">로그아웃</a>
+                    <a href="#">정보수정</a>
+                    <a href="#">EN</a>
+                </div>
+            </div>
+        </div>
+
+        <h1><a href="index.html"><img src="images/image 559.png" alt="로고"></a></h1>
+
+        <nav>
+            <ul class="gnb">
+                <li>
+                    <a href="#">영화제 소개</a>
+                </li>
+                <li>
+                    <a href="#">상영작</a>
+                </li>
+                <li>
+                    <a href="#">행사 프로그램</a>
+                </li>
+                <li>
+                    <a href="sub1.html">영화제 가이드</a>
+                </li>
+                <li>
+                    <a href="#">티켓예매</a>
+                </li>
+                
+                <li>
+                    <a href="#">공지사항</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+
+
+  <!--  <div id="hero">
+        <ul>
+            <li>
+                <img src="images/visual_main.jpg" alt="">
+                <div class="textbox">
+                    <strong>2026 서울국제여성영화제</strong>
+                    <p>여성의 시선으로, 세계를 다시 보다</p>
+                </div>
+            </li>
+            <li>
+                <img src="images/visual_main2.jpg" alt="">
+                <div class="textbox">
+                    <strong>2026 서울국제여성영화제</strong>
+                 <p>여성의 시선으로, 세계를 다시 보다</p>
+                 </div>
+            </li>
+        </ul>
+    </div> -->
+
+     <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/visual_main.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/visual_main2.jpg" alt="">
+            </div>
+        </div>
+        
+        <div class="textbox">
+            <strong>2026 서울국제여성영화제</strong>
+            <p>여성의 시선으로, 세계를 다시 보다</p>
+        </div>
+
+        <nav class="top_nav">
+             <ul>
+                <li><a href="#"><img src="images/nav1.png" alt="">상영시간표</a></li>
+                <li><a href="#"><img src="images/nav2.png" alt="">티켓 카탈로그</a></li>
+                <li><a href="#"> <img src="images/nav3.png" alt="">티켓 안내</a></li>
+                <li><a href="#"><img src="images/nav5.png" alt="">예매내역</a></li>
+                <li><a href="#"><img src="images/nav6.png" alt="">상영관 오시는 길</a></li>
+            </ul>
+        </nav>
+        
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+
+    <div id="section_box">
+       
+        <section id="section01">
+            <div class="container">
+                <div class="card news">
+                    <h3>새소식<span><img src="images/icon_sec1.png" alt=""></span></h3>
+                    <div class="board_content">
+                        <div class="item">
+                            <p class="subject">개막작 및 공식 상영작 라인업 공개</p>
+                            <p class="desc">2026 서울국제여성영화제 상영작이 공개되었습니다.</p>
+                            <span class="date">2026.07.10</span>
+                        </div>
+                        <div class="item">
+                            <p class="subject">포럼 & GV 프로그램 공개</p>
+                            <p class="desc">감독과의 대화 및 포럼 일정이 오픈되었습니다.</p>
+                            <span class="date">2026.07.18</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card ticket">
+                    <h3>티켓오픈</h3>
+                    <div class="ticket_grid">
+                        <ul class="t_item top">
+                            <li>
+                                <p class="title">얼리버드 티켓 <small>선착순 할인 예매 진행</small></p>
+                                <p class="date-info">2026.07.20 - 07.22</p>
+                            </li>
+                            <li>
+                                <p class="title">일반 예매 <small>전체 상영작 예약 가능</small></p>
+                                <p class="date-info">2026.07.25 OPEN</p>
+                            </li>
+                        </ul>      
+                        <ul class="t_item">
+                            <li>
+                                <p class="title">상영시간표 <small>전체 상영 일정 확인</small></p>
+                                <p class="date-info">2026.07.23</p>
+                            </li>
+                            <li>
+                                <p class="title">예매 가이드 <small>예매 방법 및 유의사항 안내</small></p>
+                                <p class="date-info">2026.07.15</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card newsletter">
+                    <h3>NEWSLETTER</h3>
+                    <div class="news_form">
+                        <p class="form_desc">서울국제여성영화제의 소식을<br>이메일로 받아보세요!</p>
+                        <div class="input_group">
+                            <label>이메일</label>
+                            <input type="text">
+                        </div>
+                        <div class="input_group">
+                            <label>이름</label>
+                            <input type="text">
+                        </div>
+                        <div class="checks">
+                            <label><input type="checkbox">개인정보 수집 및 이용에 동의합니다.</label>
+                            <label><input type="checkbox">광고성 정보 수신에 동의합니다.</label>
+                        </div>
+                        <button type="button" class="btn_sub">구독하기</button>
+                    </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <section id="section02">
+            <div class="container">
+                <h2 class="main_title">여성의 시선으로 바라본 영화</h2>
+    
+                <div class="movie_top_row">
+                    <article class="movie_card">
+                        <div class="card_header">
+                            <span class="category">개막작</span>
+                            <span class="material-symbols-outlined">arrow_forward_ios</span>
+                        </div>
+                        <div class="movie_text_area">
+                            <h3 class="movie_title">선샤인 (Sunshine)</h3>
+                            <p class="movie_desc">모든 10대 임신의 이면에는 그들을 그렇게 만든 사회가 있다.</p>
+                        </div>
+                        <div class="movie_images_row">
+                            <div class="video_thumb">
+                            <img src="images/section_box1.png" alt="선샤인">
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="movie_card">
+                        <div class="card_header">
+                            <span class="category">지금 여기, 한국영화</span>
+                            <span class="material-symbols-outlined">arrow_forward_ios</span>
+                        </div>
+                        <div class="movie_text_area">
+                            <h3 class="movie_title">소리의 소리</h3>
+                            <p class="movie_desc">이별의 슬픔을 이겨내고 씩씩하게 웃으면 한다는 합리화를 하고, 엄마를 위한 선택이었다며<br>내가 행한 소리의 폭력을 정당화한다. 그런데 나는 어디론가 숨고 싶다.</p>
+                        </div>
+                        <div class="video_thumb">
+                            <div class="video_thumb">
+                            <img src="images/section_box2.png" alt="소리의 소리">
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="movie_bottom_row">
+                    <div class="info_col">
+                        <div class="card_header">
+                            <span class="category">대담과 강연</span>
+                            <span class="material-symbols-outlined">arrow_forward_ios</span>
+                        </div>
+                        <div class="infor_group">
+                            <h4 class="infor_title">우리만의 방: <br>FTII와 여성 영화인들의 기억 아카이브</h4>
+                            <div class="schedule_box">
+                                <span class="label">일시</span>
+                                <p>8.24(일) 11:00 <br><span>〈우리만의 방:기억 아카이브 1> 상영 후 </span></p>
+                                <p>8.24(일) 13:30 <br><span>〈우리만의 방:기억 아카이브 2> 상영 후 </span></p>
+                            </div>
+                        </div>
+                        <div class="infor_group">
+                            <h4 class="infor_title">〈올가미에 걸린 삶〉, <br>여성 촬영감독의 시선</h4>
+                            <div class="schedule_box">
+                                <span class="label">일시</span>
+                                <p>8.24(일) 13:20 <br><span>올가미에 걸린 삶〉상영 후</span></p>
+                            </div>
+                        </div>
+                        <div class="infor_group">
+                            <h4 class="infor_title">트랜지션하는 영화의 가능성</h4>
+                             <div class="schedule_box">
+                                <span class="label">일시</span>
+                                <p>8.24(일) 19:20 <br><span>에디 앨리스: 테이크〉상영 후</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_col">
+                        <div class="card_header">
+                            <span class="category">RE:Discover 큐레이션</span>
+                            <span class="material-symbols-outlined">arrow_forward_ios</span>
+                        </div>
+                        <p class="col_desc">영화인과 다양한 분야의 전문가가 스페셜 큐레이터로 참여해 <br> 관객과 함께 보고 싶은 영화를 선정하고 상영하는 섹션</p>
+                        <div class="poster_thumb">
+                            <img src="images/section_box3.png" alt="화차">
+                        </div>
+                    </div>
+
+                    <div class="info_col">
+                        <div class="card_header">
+                            <span class="category">스페셜 토크</span>
+                            <span class="material-symbols-outlined">arrow_forward_ios</span>
+                        </div>
+                        <h4 class="event_title">[라운드테이블] 낮은 목소리- 증언과 기록, <br>‘위안부’ 문제를 다시 이야기한다는 것</h4>
+                        <p class="movie_desc">〈낮은 목소리 - 아시아에서 여성으로 산다는 것〉의 제작 30주년을 맞아, <br>변영주 감독, 강유가람 감독, 김신현경 교수가 <br>‘위안부’ 문제의 기록과 증언, 그리고 그 현재적 의미를 논의한다.</p>
+                        <div class="talk_info">
+                            <ul>
+                                <li>
+                                    <span class="label">일시</span>
+                                    <p>8.22(금) 19:40</p>
+                                </li>
+                                <li>
+                                    <span class="label">장소</span>
+                                    <p>메가박스 신촌 2관</p>
+                                </li>
+                                <li>
+                                    <span class="label">패널</span>
+                                    <p>변영주, 강유가람, 김선현경</p>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+            
+        </section>
+
+        <section id="section03">
+            <div class="container">
+                <div class="textbox">
+                    <a href="#" class="btn_more">
+                        <img src="images/icon di.png" alt="">
+                        <span>에매하기</span>
+                    </a>
+                    <strong>티켓예매</strong>
+                    <p>지금 바로 상영작을 확인하고 원하는 작품을 예약하세요.</p>
+                </div>
+                <div class="icon_menu">
+                    <a href="#" class="icon_item">
+                        <img src="images/icon nav.png" alt="">
+                        <span>주차안내</span>
+                    </a>
+                    <a href="#" class="icon_item">
+                        <img src="images/icon lav.png" alt="">
+                        <span>오시는 길</span>
+                    </a>
+                </div>
+            </div>
+            
+
+        </section>
+
+        <section id="section04">
+            <div class="container">
+                <h2>헬렌 리: 여기와 어딘가 사이</h2>
+            </div>
+
+            <ul class="content">
+                <li class="card1">
+                    <a href="#"><img src="images/card1.png" alt=""><span class="card1Span">Sall'y Beauty Spot</span></a>
+                </li>
+
+                <li class="card2">
+                    <a href="#"><img src="images/card2.png" alt=""><span class="card2Span">Tenderness</span></a>
+                </li>
+
+                <li class="card3">
+                    <a href="#"><img src="images/card3.png" alt=""><span class="card3Span">Into Such Assembly</span></a>
+                </li>
+
+                <li class="card4">
+                    <a href="#"><img src="images/card4.png" alt=""><span class="card4Span">paris to Pyongyang</span></a>
+                </li>
+
+                <li class="card5">
+                    <a href="#"><img src="images/card6.png" alt=""><span class="card5Span">THE <br>ART <br>OF <br>WOO</span></a>
+                </li>
+
+                <li class="card6">
+                    <a href="#"><img src="images/card7-1.png" alt=""><span class="card6Span">My Niagara</span></a>
+                </li>
+
+                <li class="card7">
+                    <a href="#"><img src="images/card7.png" alt=""><span class="card7Span">Star</span></a>
+                </li>
+
+                <li class="card8">
+                    <a href="#"><img src="images/card8.png" alt=""><span class="card2Span">Subrosa</span></a>
+                </li>
+
+                <li class="card9">
+                    <a href="#"><img src="images/card9.png" alt=""><span class="card9Span">Prey</span></a>
+                </li>
+            </ul>
+        </section>
+
+
+
+
+    </div>
+    
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer_top">
+                <h1 class="f_logo">
+                    <img src="images/footer.png" alt="">
+                </h1>
+                <ul class="f_links">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보취급방침</a></li>
+                        <li><a href="#">이메일무단수집거부</a></li>
+                        <li><a href="#">사무국 오시는 길</a></li>
+                </ul>
+                <div class="f_info">
+                     <p>(사)서울국제여성영화제 <br>E-MAIL siwff@siwff.co.kr</p>
+                    <address>
+                        (03992) 서울시 마포구 양화로 161 케이스탑빌딩 1103호<br>
+                        TEL. 02-583-3598 | FAX. 02-583-3599 | E-MAIL. siwff@siwff.or.kr
+                    </address>
+                </div>
+            </div>
+
+           <!--  <div class="footer_bottom">
+                <div class="f_info">
+                     <p>(사)서울국제여성영화제 <br>E-MAIL siwff@siwff.co.kr</p>
+                    <address>
+                        (03992) 서울시 마포구 양화로 161 케이스탑빌딩 1103호<br>
+                        TEL. 02-583-3598 | FAX. 02-583-3599 | E-MAIL. siwff@siwff.or.kr
+                    </address>
+                </div>
+            </div> -->
+        </div>
+    </footer>
+   
+
+
+
+    <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    </script>
+
+
+
+
+</body>
+</html>
