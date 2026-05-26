@@ -1,61 +1,41 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const historyItems = Array.from(document.querySelectorAll('.history_item'));
     const historyTrack = document.querySelector('.history_track');
-    const selectedYearTitle = document.querySelector('#festivalSelectedYear');
     const prevButton = document.querySelector('.history_prev');
     const nextButton = document.querySelector('.history_next');
 
-    if (!historyItems.length) return;
+    if (!historyTrack || !prevButton || !nextButton) return;
 
-    let activeIndex = historyItems.findIndex(function (item) {
-        return item.classList.contains('now');
-    });
+    function centerCurrentYear() {
+        const historyItems = Array.from(historyTrack.querySelectorAll('.history_item'));
+        const currentYear = historyTrack.querySelector('.history_item.now');
 
-    if (activeIndex < 0) activeIndex = 0;
+        if (!currentYear) return;
 
-    function updateHistory(index) {
-        activeIndex = (index + historyItems.length) % historyItems.length;
+        const currentIndex = historyItems.indexOf(currentYear);
+        const itemGap = parseFloat(window.getComputedStyle(historyTrack).gap) || 0;
+        const itemStep = currentYear.offsetWidth + itemGap;
+        const visibleCount = Math.max(1, Math.floor((historyTrack.clientWidth + itemGap) / itemStep));
+        const leadingIndex = Math.max(0, currentIndex - Math.floor(visibleCount / 2));
 
-        historyItems.forEach(function (item, itemIndex) {
-            item.classList.toggle('now', itemIndex === activeIndex);
-        });
-
-        const activeItem = historyItems[activeIndex];
-        const year = activeItem.dataset.year;
-        const edition = activeItem.dataset.edition.replace('제', '').replace('회', '');
-
-        if (selectedYearTitle) {
-            selectedYearTitle.textContent = edition + '회 영화제 (' + year + ')';
-        }
-
-        if (historyTrack) {
-            historyTrack.scrollLeft = activeItem.offsetLeft - (historyTrack.clientWidth / 2) + (activeItem.offsetWidth / 2);
-        }
+        historyTrack.scrollLeft = leadingIndex * itemStep;
     }
 
-    historyItems.forEach(function (item, index) {
-        item.addEventListener('click', function () {
-            updateHistory(index);
-        });
-    });
-
-    if (prevButton) {
-        prevButton.addEventListener('click', function () {
-            updateHistory(activeIndex - 1);
-        });
+    function moveHistory(direction) {
+        const firstItem = historyTrack.querySelector('.history_item');
+        const itemWidth = firstItem ? firstItem.offsetWidth : 120;
+        const itemGap = parseFloat(window.getComputedStyle(historyTrack).gap) || 0;
+        historyTrack.scrollBy({ left: direction * (itemWidth + itemGap) * 2, behavior: 'smooth' });
     }
 
-    if (nextButton) {
-        nextButton.addEventListener('click', function () {
-            updateHistory(activeIndex + 1);
-        });
-    }
-
-    updateHistory(activeIndex);
-    window.addEventListener('load', function () {
-        updateHistory(activeIndex);
-        setTimeout(function () {
-            updateHistory(activeIndex);
-        }, 100);
+    prevButton.addEventListener('click', function () {
+        moveHistory(-1);
     });
+
+    nextButton.addEventListener('click', function () {
+        moveHistory(1);
+    });
+
+    requestAnimationFrame(centerCurrentYear);
+    window.addEventListener('load', centerCurrentYear);
+    window.addEventListener('resize', centerCurrentYear);
 });
