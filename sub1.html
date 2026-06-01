@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css?v=subpage-mood-3">
     <link rel="stylesheet" href="css/폰트.css">
     <link rel="stylesheet" href="css/subpage-mood.css?v=3">
-    <link rel="stylesheet" href="css/shared-header.css?v=7">
+    <link rel="stylesheet" href="css/shared-header.css?v=8">
     <script src="script/action.js" defer></script>
 </head>
 <body>
@@ -29,7 +29,13 @@
 
         <h1><a href="index.html"><img src="images/image 559.png" alt="로고"></a></h1>
 
-        <nav>
+        <button class="header-menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="site-menu" aria-label="주요 메뉴">
             <ul class="gnb">
                 <li class="current">
                     <a href="sub1.html">영화제 소개</a>

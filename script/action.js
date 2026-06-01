@@ -1,4 +1,38 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('header.container');
+    const menuButton = document.querySelector('.header-menu-toggle');
+    const siteMenu = document.querySelector('#site-menu');
+
+    if (header && menuButton && siteMenu) {
+        function setMenuOpen(isOpen) {
+            header.classList.toggle('menu-open', isOpen);
+            menuButton.setAttribute('aria-expanded', String(isOpen));
+            menuButton.setAttribute('aria-label', isOpen ? '메뉴 닫기' : '메뉴 열기');
+        }
+
+        menuButton.addEventListener('click', function () {
+            setMenuOpen(!header.classList.contains('menu-open'));
+        });
+
+        siteMenu.addEventListener('click', function (event) {
+            if (event.target.closest('a')) {
+                setMenuOpen(false);
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                setMenuOpen(false);
+            }
+        });
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 1024) {
+                setMenuOpen(false);
+            }
+        });
+    }
+
     const historyTrack = document.querySelector('.history_track');
     const prevButton = document.querySelector('.history_prev');
     const nextButton = document.querySelector('.history_next');
