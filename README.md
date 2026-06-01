@@ -1,28 +1,4 @@
-`Everything up-to-date` — 로컬이 원격과 동일한 상태라 push할 게 없다는 뜻입니다.
 
-README를 로컬에 아직 작성 안 했기 때문입니다. 아래 명령어로 README를 만들고 push해 주세요:
-
-```bash
-curl -o README.md "https://raw.githubusercontent.com/minjoo073/18_myhtml/main/README.md"
-```
-
-위 명령어는 현재 원격의 README를 받아오는 거라 소용없고, 직접 작성해야 합니다.
-
-가장 쉬운 방법은 **GitHub 웹에서 직접 편집**입니다:
-
-1. `https://github.com/minjoo073/18_myhtml` 접속
-2. `README.md` 클릭
-3. 오른쪽 위 연필(✏️) 아이콘 클릭
-4. 아래 내용 전체 선택 후 붙여넣기
-5. **Commit changes** 클릭
-
----
-
-붙여넣을 README 내용:
-
-로컬 README가 초기화된 상태입니다. 아래 내용을 GitHub 웹 에디터에 그대로 붙여넣어 주세요:
-
-```markdown
 # 2026 서울국제여성영화제 웹사이트
 
 2026 서울국제여성영화제(SIWFF) 공식 웹사이트 퍼블리싱 실습 프로젝트입니다.  
