@@ -1,1 +1,118 @@
-# 18_myhtml
+`Everything up-to-date` — 로컬이 원격과 동일한 상태라 push할 게 없다는 뜻입니다.
+
+README를 로컬에 아직 작성 안 했기 때문입니다. 아래 명령어로 README를 만들고 push해 주세요:
+
+```bash
+curl -o README.md "https://raw.githubusercontent.com/minjoo073/18_myhtml/main/README.md"
+```
+
+위 명령어는 현재 원격의 README를 받아오는 거라 소용없고, 직접 작성해야 합니다.
+
+가장 쉬운 방법은 **GitHub 웹에서 직접 편집**입니다:
+
+1. `https://github.com/minjoo073/18_myhtml` 접속
+2. `README.md` 클릭
+3. 오른쪽 위 연필(✏️) 아이콘 클릭
+4. 아래 내용 전체 선택 후 붙여넣기
+5. **Commit changes** 클릭
+
+---
+
+붙여넣을 README 내용:
+
+로컬 README가 초기화된 상태입니다. 아래 내용을 GitHub 웹 에디터에 그대로 붙여넣어 주세요:
+
+```markdown
+# 2026 서울국제여성영화제 웹사이트
+
+2026 서울국제여성영화제(SIWFF) 공식 웹사이트 퍼블리싱 실습 프로젝트입니다.  
+메인 페이지(`index.html`)와 서브 페이지(`sub1.html`, 영화제 소개)로 구성되어 있습니다.
+
+---
+
+## 기술 스택
+
+| 분류 | 사용 기술 |
+|------|-----------|
+| 마크업 | HTML5 |
+| 스타일 | CSS3 (다중 CSS 파일 분리) |
+| 스크립트 | Vanilla JavaScript |
+| 슬라이더 | Swiper.js v12 |
+| 아이콘 | Google Material Symbols |
+| 폰트 | Google Fonts |
+
+---
+
+## 파일 구조
+
+```
+18_myhtml/
+├── index.html
+├── sub1.html
+├── css/
+│   ├── style.css
+│   ├── main-polish.css
+│   ├── subpage-mood.css
+│   ├── shared-header.css
+│   └── 폰트.css
+├── script/
+│   └── action.js
+└── images/
+```
+
+---
+
+## 제작 과정
+
+### 1단계 · 초기 업로드 (2026-05-02)
+- `index.html`, `sub1.html` 기본 마크업 작성
+- `css/style.css` 기초 레이아웃 구성
+- 로고, 네비게이션, 섹션 이미지 등 에셋 추가
+
+### 2단계 · 사이트 전체 디자인 정제 (2026-05-03)
+- CSS 전면 정리 및 섹션별 레이아웃 개선
+- `script/action.js` 작성 — GNB 드롭다운, 스크롤 이벤트 구현
+- 서브 페이지(`sub1.html`) UI 개선
+
+### 3단계 · 서브 페이지 개선 (2026-05-26 오전)
+- 영화제 소개 페이지 콘텐츠 및 레이아웃 재구성
+- 히어로 이미지(`festival-intro-hero.png`) 교체
+- JavaScript 스크립트 경량화 및 중복 코드 제거
+
+### 4단계 · 타이포그래피 및 히어로 자동재생 (2026-05-26 오후)
+- 메인 폰트 크기·행간·자간 전반 조정
+- 히어로 슬라이더 자동재생(autoplay) 기능 추가
+
+### 5단계 · 메인 페이지 전면 재설계 (2026-06-01)
+- `css/style.css` 대규모 확장 (약 1,900줄 추가)
+- 섹션 이미지 교체(`section_box2_new.png`)
+- 카드 그리드, 배너, 섹션 전환 애니메이션 전면 개편
+
+### 6단계 · 메인·서브 페이지 최종 마무리 (2026-06-02)
+- `css/main-polish.css` 신규 작성 — 메인 페이지 세부 디테일 polish
+- `css/subpage-mood.css` 신규 작성 — 서브 페이지 분위기·색조 정의
+- `css/shared-header.css` 신규 작성 — 헤더를 별도 파일로 분리하여 재사용성 확보
+- 두 페이지 최종 레이아웃 점검 및 간격·여백 통일
+
+---
+
+## 주요 오류 및 버그 수정 내역
+
+| 시점 | 문제 | 해결 방법 |
+|------|------|-----------|
+| 2단계 | `action.js`가 빈 파일로 커밋되어 GNB 인터랙션 미동작 | JS 전체 로직 새로 작성 |
+| 3단계 | `sub1.html` 히어로 이미지 경로 오류로 깨진 이미지 표시 | 이미지 파일 교체 및 경로 수정 |
+| 3단계 | JS 이벤트 핸들러 중복 등록으로 클릭 시 오동작 | 불필요한 핸들러 제거, 로직 통합 |
+| 4단계 | 히어로 슬라이더 자동재생 설정 누락으로 수동 조작만 가능 | Swiper `autoplay` 옵션 추가 |
+| 4단계 | 일부 브라우저에서 폰트 크기가 의도와 다르게 렌더링 | `line-height`, `letter-spacing` 전반 재조정 |
+| 5단계 | `section_box2.png` 해상도 부족으로 흐릿하게 표시 | 고해상도 이미지(`section_box2_new.png`)로 교체 |
+| 6단계 | 메인·서브 페이지의 헤더 스타일이 각각 달라 일관성 없음 | `shared-header.css`로 분리하여 공통 적용 |
+| 6단계 | CSS 쿼리스트링 버전(`?v=...`) 미관리로 캐시 문제 발생 | 각 CSS `<link>` 태그의 버전 값 통일 |
+
+---
+
+## 실행 방법
+
+별도 빌드 없이 브라우저에서 `index.html`을 열면 바로 확인할 수 있습니다.  
+VS Code의 **Live Server** 익스텐션 사용을 권장합니다.
+```# 18_myhtml
