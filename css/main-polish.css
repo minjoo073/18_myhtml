@@ -1,0 +1,999 @@
+/* Main page final section sizing */
+:root {
+    --main-frame: 1180px;
+    --main-gutter: 40px;
+    --main-bg: #fbf7f1;
+}
+
+html,
+body,
+#section_box,
+#section01,
+#section02,
+#section03 {
+    background: var(--main-bg) !important;
+}
+
+.mySwiper .swiper-slide::after {
+    background:
+        linear-gradient(90deg, rgba(251, 247, 241, 0.28) 0%, rgba(251, 247, 241, 0.08) 44%, rgba(32, 29, 33, 0.03) 100%),
+        linear-gradient(180deg, rgba(32, 29, 33, 0) 0%, rgba(32, 29, 33, 0.05) 100%);
+}
+
+.mySwiper .visual-dark::after {
+    background:
+        linear-gradient(90deg, rgba(22, 19, 23, 0.22) 0%, rgba(22, 19, 23, 0.08) 46%, rgba(22, 19, 23, 0.02) 100%),
+        linear-gradient(180deg, rgba(22, 19, 23, 0) 0%, rgba(22, 19, 23, 0.06) 100%);
+}
+
+.mySwiper .textbox strong {
+    margin-bottom: 26px;
+}
+
+.mySwiper .textbox,
+.top_nav ul,
+#section01 .container,
+#section02 .container,
+#section03 .container,
+#section04 .container,
+#section04 .content,
+#footer .container {
+    width: min(var(--main-frame), calc(100% - var(--main-gutter)));
+    max-width: var(--main-frame);
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.top_nav {
+    width: 100%;
+    background: var(--main-bg) !important;
+    border-bottom-color: rgba(32, 29, 33, 0.07) !important;
+}
+
+.top_nav ul {
+    width: min(1320px, calc(100% - 72px));
+    max-width: 1320px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.top_nav li {
+    min-width: 0;
+}
+
+.top_nav li a {
+    min-height: 46px;
+    padding: 0 20px;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(32, 29, 33, 0.72);
+    border-left-color: rgba(32, 29, 33, 0.055);
+    border-right: 0;
+}
+
+.top_nav li:last-child a {
+    border-right-color: rgba(32, 29, 33, 0.055);
+}
+
+.top_nav li a.quick-primary {
+    font-weight: 600;
+}
+
+.top_nav li a.quick-primary::after {
+    width: 4px;
+    height: 4px;
+    margin-left: 1px;
+}
+
+.top_nav li a img,
+.top_nav li a.quick-primary img,
+.mySwiper:has(.visual-light.swiper-slide-active) .top_nav li a img,
+.mySwiper:has(.visual-light.swiper-slide-active) .top_nav li a.quick-primary img {
+    width: 18px;
+    height: 18px;
+    opacity: 0.78;
+}
+
+.top_nav ul,
+#section01 .container,
+#section02 .container,
+#section04 .container,
+#footer .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#section01 .container {
+    gap: 24px;
+}
+
+#section01 {
+    padding: 58px 0 82px;
+}
+
+#section01 .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(0, 1.48fr) minmax(260px, 0.82fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+#section01 .card {
+    min-height: 330px;
+    padding: 30px 32px;
+    background: rgba(255, 252, 247, 0.72);
+    border: 1px solid rgba(32, 29, 33, 0.1);
+    box-shadow: 0 18px 46px rgba(32, 29, 33, 0.045);
+}
+
+#section01 h3 {
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+#section01 h3 span {
+    width: 18px;
+}
+
+#section01 .board_content,
+#section01 .ticket_grid,
+#section01 .news_form {
+    justify-content: flex-start;
+}
+
+#section01 .item {
+    padding: 22px 0 20px;
+    border-top-color: rgba(32, 29, 33, 0.14);
+}
+
+#section01 .item:first-child {
+    padding-top: 0;
+}
+
+#section01 .item .subject {
+    margin-bottom: 7px;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+#section01 .item .desc {
+    margin-bottom: 18px;
+    font-size: 12px;
+    line-height: 1.62;
+}
+
+#section01 .item .date {
+    font-size: 12px;
+}
+
+#section01 .ticket {
+    padding: 30px 36px;
+    background: #4b3037;
+    border: 0;
+    box-shadow: 0 22px 54px rgba(75, 48, 55, 0.16);
+}
+
+#section01 .ticket h3 {
+    margin-bottom: 34px;
+}
+
+#section01 .ticket_badge {
+    padding: 5px 10px;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    opacity: 0.82;
+}
+
+#section01 .ticket_grid {
+    gap: 0;
+    margin: 0;
+}
+
+#section01 .ticket .t_item {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px;
+    padding: 22px 0;
+    border-top-color: rgba(255, 247, 239, 0.2);
+}
+
+#section01 .ticket .t_item.top {
+    padding-top: 0;
+    border-top: 0;
+}
+
+#section01 .ticket .t_item li {
+    width: auto;
+}
+
+#section01 .ticket .t_item .title {
+    font-size: 15px;
+    line-height: 1.45;
+}
+
+#section01 .ticket .t_item .title small {
+    display: block;
+    margin: 4px 0 0;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+#section01 .ticket .t_item .date-info {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+#section01 .newsletter {
+    padding: 30px 30px;
+    background: #eee7dd;
+}
+
+#section01 .newsletter h3 {
+    justify-content: flex-start;
+    margin-bottom: 34px;
+    text-align: left;
+}
+
+#section01 .newsletter .news_form {
+    width: 100%;
+    margin: 0;
+}
+
+#section01 .form_desc {
+    margin-bottom: 26px;
+    font-size: 12px;
+    line-height: 1.65;
+    text-align: left;
+}
+
+#section01 .input_group {
+    margin-bottom: 18px;
+    padding-bottom: 7px;
+    border-bottom-color: rgba(32, 29, 33, 0.22);
+}
+
+#section01 .input_group label {
+    width: 54px;
+    font-size: 12px;
+}
+
+#section01 .checks {
+    margin: 8px 0 24px;
+}
+
+#section01 .checks label {
+    font-size: 9px;
+    line-height: 1.45;
+}
+
+#section01 .btn_sub {
+    padding: 12px 14px;
+    font-size: 12px;
+}
+
+#section02 .movie_top_row,
+#section02 .movie_bottom_row {
+    width: 100%;
+}
+
+#section02 .movie_bottom_row {
+    gap: 34px;
+    align-items: stretch;
+}
+
+#section02 .movie_bottom_row .info_col {
+    padding: 22px 22px 24px;
+    background: rgba(255, 252, 247, 0.58);
+    border: 1px solid rgba(32, 29, 33, 0.1);
+    box-sizing: border-box;
+}
+
+#section02 .movie_bottom_row .card_header {
+    min-height: auto;
+    padding: 0 0 14px;
+    margin-bottom: 22px;
+    border-top: 0;
+    border-bottom: 1px solid rgba(32, 29, 33, 0.16);
+}
+
+#section02 .movie_bottom_row .category {
+    font-size: 12px;
+}
+
+#section02 .movie_bottom_row .card_header .material-symbols-outlined {
+    font-size: 23px;
+}
+
+#section02 .movie_bottom_row .infor_group {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    padding-bottom: 28px;
+}
+
+#section02 .movie_bottom_row .infor_group + .infor_group {
+    padding-top: 28px;
+}
+
+#section02 .movie_bottom_row .infor_title,
+#section02 .movie_bottom_row .event_title {
+    font-size: 15px;
+    line-height: 1.42;
+}
+
+#section02 .movie_bottom_row .movie_desc,
+#section02 .movie_bottom_row .col_desc {
+    margin-bottom: 18px;
+    font-size: 12px;
+    line-height: 1.68;
+}
+
+#section02 .movie_bottom_row .schedule_box,
+#section02 .movie_bottom_row .room_schedule,
+#section02 .movie_bottom_row .talk_info li {
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 12px 16px;
+}
+
+#section02 .movie_bottom_row .room_schedule {
+    grid-template-rows: auto auto;
+}
+
+#section02 .movie_bottom_row .schedule_box p,
+#section02 .movie_bottom_row .talk_info p {
+    font-size: 12px;
+    line-height: 1.58;
+}
+
+#section02 .movie_bottom_row .schedule_box p span {
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+#section02 .movie_bottom_row .label {
+    min-width: 46px;
+    padding: 6px 10px;
+    font-size: 10px;
+}
+
+#section02 .movie_bottom_row .info_col:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+#section02 .movie_bottom_row .info_col:first-child .infor_group {
+    flex: 1;
+}
+
+#section02 .movie_bottom_row .info_col:first-child .infor_group:last-child {
+    border-bottom: 0;
+}
+
+#section02 .movie_bottom_row .info_col:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+#section02 .movie_bottom_row .info_col:last-child .event_title {
+    margin-bottom: 18px;
+    font-size: 16px;
+    line-height: 1.48;
+}
+
+#section02 .movie_bottom_row .info_col:last-child > .movie_desc {
+    max-width: 94%;
+    margin-bottom: 22px;
+    font-size: 12px;
+    line-height: 1.78;
+}
+
+#section02 .movie_bottom_row .info_col:last-child .talk_info {
+    margin-top: 0;
+    padding: 15px 17px;
+    background: rgba(243, 236, 227, 0.62);
+    border: 1px solid rgba(32, 29, 33, 0.08);
+    box-sizing: border-box;
+}
+
+#section02 .movie_bottom_row .info_col:last-child .talk_info li {
+    min-height: 0;
+    padding: 10px 0;
+    align-items: center;
+}
+
+#section02 .movie_bottom_row .info_col:last-child .talk_info li:last-child {
+    border-bottom: 0;
+}
+
+#section02 .movie_bottom_row .info_col:last-child .talk_info p {
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+#section02 .movie_bottom_row .poster_thumb {
+    aspect-ratio: 1 / 1.12;
+    max-height: 390px;
+}
+
+#section02 .movie_bottom_row .talk_info {
+    margin-top: 16px;
+}
+
+#section02 .movie_bottom_row .talk_info li {
+    padding: 12px 0;
+}
+
+#section03 {
+    padding: 0 0 58px;
+}
+
+#section03 .container {
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 44px;
+    padding: 30px 40px;
+    box-shadow: 0 18px 54px rgba(32, 29, 33, 0.1);
+}
+
+#section03 .textbox {
+    width: auto;
+}
+
+#section03 .section_kicker {
+    margin-bottom: 9px;
+    font-size: 11px;
+}
+
+#section03 .textbox strong {
+    margin-bottom: 10px;
+    font-size: clamp(24px, 2.2vw, 32px);
+}
+
+#section03 .textbox p {
+    max-width: 520px;
+    font-size: 13px;
+    line-height: 1.58;
+}
+
+#section03 .textbox .btn_more {
+    margin-top: 16px;
+}
+
+#section03 .btn_more {
+    padding: 9px 15px;
+    font-size: 12px;
+}
+
+#section03 .visit_box {
+    padding-left: 26px;
+}
+
+#section03 .visit_label {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+#section03 .icon_menu {
+    gap: 10px;
+}
+
+#section03 .icon_item {
+    gap: 10px;
+    padding: 13px 14px;
+}
+
+#section03 .icon_item img {
+    height: 27px;
+}
+
+#section03 .icon_item span {
+    font-size: 13px;
+}
+
+#section04 {
+    padding: 66px 20px 76px;
+}
+
+#section04 .container {
+    padding: 0;
+}
+
+#section04 .section_kicker {
+    margin-bottom: 10px;
+}
+
+#section04 h2 {
+    margin-bottom: 38px;
+    font-size: clamp(26px, 2.4vw, 34px);
+    font-weight: 600;
+    word-break: keep-all;
+}
+
+#section04 .content {
+    grid-template-columns: 276px 276px 176px 376px;
+    gap: 12px;
+    max-width: 1152px;
+    width: fit-content;
+}
+
+#section04 .content li span,
+#section04 .content li span.card1Span,
+#section04 .content li span.card2Span,
+#section04 .content li span.card3Span,
+#section04 .content li span.card4Span,
+#section04 .content li span.card5Span,
+#section04 .content li span.card6Span,
+#section04 .content li span.card7Span,
+#section04 .content li span.card8Span,
+#section04 .content li span.card9Span {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    font-size: 15px;
+    line-height: 1.22;
+}
+
+#section04 .content li span.card1Span,
+#section04 .content li span.card4Span,
+#section04 .content li span.card6Span,
+#section04 .content li span.card7Span {
+    font-size: 14px;
+}
+
+#section04 .content li span.card3Span {
+    font-size: 13px;
+}
+
+#section04 .content li span.card5Span,
+#section04 .content li span.card9Span {
+    font-size: 20px;
+}
+
+#section04 .content .card1 {
+    height: 494px;
+}
+
+#section04 .content .card2 {
+    height: 239px;
+}
+
+#section04 .content .card3,
+#section04 .content .card4,
+#section04 .content .card5,
+#section04 .content .card6 {
+    height: 243px;
+}
+
+#section04 .content .card7,
+#section04 .content .card8,
+#section04 .content .card9 {
+    height: 286px;
+}
+
+#footer {
+    background: #201d21;
+    color: rgba(255, 247, 239, 0.72);
+}
+
+#footer .container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#footer .f_logo img {
+    filter: brightness(0) invert(1);
+    opacity: 0.92;
+}
+
+#footer .f_links li a,
+#footer .f_info p {
+    color: #fff7ef;
+}
+
+#footer .f_info address {
+    color: rgba(255, 247, 239, 0.6);
+}
+
+#footer .f_links li a:hover {
+    color: #fff;
+}
+
+@media (max-width: 1280px) {
+    :root {
+        --main-frame: 1100px;
+        --main-gutter: 56px;
+    }
+
+    #section01 .container {
+        gap: 18px;
+    }
+
+    #section03 .container {
+        grid-template-columns: minmax(0, 1fr) 320px;
+        gap: 32px;
+        padding: 28px 34px;
+    }
+
+    #section04 .content {
+        grid-template-columns: 23.9vw 23.9vw 15.3vw 32.6vw;
+        width: min(var(--main-frame), calc(100% - var(--main-gutter)));
+        max-width: 1110px;
+    }
+
+    #section04 .content .card1 {
+        height: 43vw;
+        max-height: 494px;
+    }
+
+    #section04 .content .card2 {
+        height: 20.7vw;
+        max-height: 239px;
+    }
+
+    #section04 .content .card3,
+    #section04 .content .card4,
+    #section04 .content .card5,
+    #section04 .content .card6 {
+        height: 21.1vw;
+        max-height: 243px;
+    }
+
+    #section04 .content .card7,
+    #section04 .content .card8,
+    #section04 .content .card9 {
+        height: 24.8vw;
+        max-height: 286px;
+    }
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --main-frame: 720px;
+        --main-gutter: 44px;
+    }
+
+    .mySwiper {
+        height: 500px;
+        min-height: 440px;
+    }
+
+    .mySwiper .textbox {
+        bottom: 64px;
+    }
+
+    .mySwiper .textbox strong {
+        font-size: 34px;
+        line-height: 1.12;
+    }
+
+    .mySwiper .textbox p {
+        font-size: 15px;
+    }
+
+    .top_nav {
+        overflow-x: auto;
+    }
+
+    .top_nav ul {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        width: min(var(--main-frame), calc(100% - var(--main-gutter)));
+        min-width: 0;
+        max-width: var(--main-frame);
+    }
+
+    .top_nav li a {
+        min-height: 44px;
+        justify-content: center;
+        padding: 0 10px;
+        white-space: nowrap;
+    }
+
+    #section01 {
+        padding-top: 54px;
+        padding-bottom: 72px;
+    }
+
+    #section01 .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    #section01 .card {
+        width: 100%;
+        min-height: auto;
+        padding: 28px 30px;
+    }
+
+    #section01 .ticket .t_item {
+        gap: 28px;
+    }
+
+    #section02 {
+        padding: 64px 0 74px;
+    }
+
+    #section02 .movie_top_row,
+    #section02 .movie_bottom_row {
+        grid-template-columns: 1fr;
+        max-width: 560px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #section03 .container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 30px;
+    }
+
+    #section03 .visit_box {
+        padding-left: 0;
+        padding-top: 22px;
+        border-left: 0;
+        border-top: 1px solid rgba(255, 247, 239, 0.18);
+    }
+
+    #section04 .content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 720px;
+        gap: 12px;
+    }
+
+    #section04 .content .card1,
+    #section04 .content .card2,
+    #section04 .content .card3,
+    #section04 .content .card4,
+    #section04 .content .card5,
+    #section04 .content .card6,
+    #section04 .content .card7,
+    #section04 .content .card8,
+    #section04 .content .card9 {
+        grid-column: auto;
+        grid-row: auto;
+        height: 240px;
+        max-height: none;
+    }
+
+    #section04 .content .card1,
+    #section04 .content .card5,
+    #section04 .content .card9 {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --main-gutter: 40px;
+    }
+
+    .mySwiper .textbox,
+    .top_nav ul,
+    #section01 .container,
+    #section02 .container,
+    #section03 .container,
+    #section04 .container,
+    #section04 .content,
+    #footer .container {
+        width: calc(100% - var(--main-gutter));
+        max-width: none;
+    }
+
+    #section01 .container,
+    #section02 .container,
+    #section04 .container,
+    #footer .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #section03 {
+        padding-bottom: 44px;
+    }
+
+    #section03 .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 26px 24px;
+    }
+
+    #section03 .textbox strong {
+        font-size: 24px;
+    }
+
+    #section03 .visit_box {
+        padding-top: 18px;
+    }
+
+    #section03 .icon_item {
+        padding: 12px 14px;
+    }
+
+    #section04 {
+        padding: 46px 20px 54px;
+    }
+
+    #section04 h2 {
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 24px;
+        font-size: 20px;
+        line-height: 1.22;
+    }
+
+    #section04 .content {
+        grid-template-columns: 1fr;
+        max-width: 360px;
+        gap: 10px;
+    }
+
+    #section04 .content .card1,
+    #section04 .content .card2,
+    #section04 .content .card3,
+    #section04 .content .card4,
+    #section04 .content .card5,
+    #section04 .content .card6,
+    #section04 .content .card7,
+    #section04 .content .card8,
+    #section04 .content .card9 {
+        grid-column: auto;
+        grid-row: auto;
+        height: 205px;
+        max-height: none;
+    }
+
+    #section04 .content li span,
+    #section04 .content li span.card1Span,
+    #section04 .content li span.card2Span,
+    #section04 .content li span.card3Span,
+    #section04 .content li span.card4Span,
+    #section04 .content li span.card5Span,
+    #section04 .content li span.card6Span,
+    #section04 .content li span.card7Span,
+    #section04 .content li span.card8Span,
+    #section04 .content li span.card9Span {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        font-size: 13px;
+    }
+
+    #section04 .content li span.card5Span,
+    #section04 .content li span.card9Span {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --main-gutter: 36px;
+    }
+
+    .mySwiper {
+        height: 420px;
+        min-height: 420px;
+    }
+
+    .mySwiper .textbox {
+        bottom: 54px;
+    }
+
+    .mySwiper .textbox strong {
+        margin-bottom: 18px;
+        font-size: 26px;
+    }
+
+    .mySwiper .textbox p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .top_nav ul {
+        display: flex;
+        width: max-content;
+        min-width: calc(100% - var(--main-gutter));
+        max-width: none;
+    }
+
+    .top_nav li a {
+        min-height: 42px;
+        padding: 0 12px;
+        font-size: 12px;
+    }
+
+    .top_nav li a img,
+    .top_nav li a.quick-primary img {
+        width: 18px;
+        height: 18px;
+    }
+
+    #section01 {
+        padding-top: 44px;
+        padding-bottom: 58px;
+    }
+
+    #section01 .card,
+    #section01 .ticket,
+    #section01 .newsletter {
+        padding: 24px 22px;
+    }
+
+    #section01 h3,
+    #section01 .ticket h3,
+    #section01 .newsletter h3 {
+        margin-bottom: 24px;
+        font-size: 17px;
+    }
+
+    #section01 .ticket .t_item {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    #section01 .ticket .t_item .title {
+        font-size: 14px;
+    }
+
+    #section01 .ticket .t_item .date-info {
+        margin-top: 8px;
+    }
+
+    #section02 {
+        padding: 54px 0 62px;
+    }
+
+    #section02 .main_title {
+        font-size: 27px;
+    }
+
+    #section02 .section_lead {
+        max-width: 310px;
+        margin-bottom: 34px;
+    }
+
+    #section02 .movie_top_row,
+    #section02 .movie_bottom_row {
+        max-width: none;
+        gap: 28px;
+    }
+
+    #section02 .movie_bottom_row .info_col {
+        padding: 0;
+        background: transparent;
+        border: 0;
+    }
+
+    #section02 .movie_bottom_row .card_header {
+        padding: 18px 0 12px;
+        border-top: 1px solid rgba(32, 29, 33, 0.28);
+        border-bottom: 0;
+    }
+
+    #section03 .container {
+        padding: 24px 22px;
+    }
+
+    #section03 .icon_menu {
+        flex-direction: column;
+    }
+
+    #section04 .content {
+        width: calc(100% - var(--main-gutter));
+        max-width: none;
+    }
+
+    #section04 h2 {
+        max-width: 280px;
+        font-size: 19px;
+    }
+
+    #footer .container {
+        width: calc(100% - var(--main-gutter));
+    }
+}

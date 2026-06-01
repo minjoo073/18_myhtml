@@ -1,0 +1,305 @@
+/* Sub page mood alignment */
+html,
+body {
+    background: #fbf7f1;
+}
+
+#hero_sub {
+    min-height: 510px;
+    color: #fff7ef;
+    background-color: #161317;
+    background-image:
+        linear-gradient(90deg, rgba(22, 19, 23, 0.58) 0%, rgba(22, 19, 23, 0.26) 48%, rgba(22, 19, 23, 0.04) 100%),
+        url("../images/festival-intro-hero.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#hero_sub::before {
+    background: linear-gradient(180deg, rgba(22, 19, 23, 0) 0%, rgba(22, 19, 23, 0.2) 100%);
+}
+
+#hero_sub .hero_inner {
+    width: min(1180px, calc(100% - 80px));
+    max-width: 1180px;
+    padding: 66px 0 72px;
+}
+
+.hero_eyebrow,
+.section_eyebrow {
+    color: #b9857c;
+    letter-spacing: 0.14em;
+}
+
+.hero_eyebrow {
+    color: rgba(255, 247, 239, 0.72);
+}
+
+#hero_sub h2 {
+    max-width: 720px;
+    color: #fff7ef;
+    font-size: clamp(40px, 3.45vw, 54px);
+    font-weight: 660;
+    line-height: 1.12;
+    letter-spacing: 0;
+}
+
+.hero_desc {
+    max-width: 520px;
+    color: rgba(255, 247, 239, 0.78);
+    letter-spacing: 0;
+}
+
+#section_box_sub {
+    background: #fbf7f1;
+}
+
+#section_box_sub nav {
+    background: rgba(251, 247, 241, 0.98);
+    border-bottom: 1px solid rgba(32, 29, 33, 0.1);
+}
+
+#section_box_sub nav .snb {
+    max-width: 1180px;
+    padding: 22px 0 20px;
+    gap: 34px;
+    background: transparent;
+    width: min(1180px, calc(100% - 80px));
+}
+
+#section_box_sub nav .snb li a {
+    color: #201d21;
+    border-bottom-color: rgba(32, 29, 33, 0.16);
+}
+
+#section_box_sub nav .snb li a::after {
+    background: #743746;
+}
+
+#section_box_sub nav .snb small,
+.archive_label {
+    color: #743746;
+    letter-spacing: 0.13em;
+}
+
+#section_box_sub nav .snb strong,
+.intro_heading h2,
+.archive_heading h2,
+.mission_copy h3,
+.content_sub .content_box .text_box h3 {
+    color: #201d21;
+    letter-spacing: 0;
+}
+
+#section_box_sub .container {
+    max-width: 1180px;
+    padding: 66px 32px 96px;
+}
+
+.festival_intro {
+    padding-bottom: 72px;
+    border-bottom-color: rgba(32, 29, 33, 0.12);
+}
+
+.intro_heading {
+    max-width: 720px;
+}
+
+.intro_heading h2 {
+    font-size: clamp(32px, 2.8vw, 40px);
+    font-weight: 640;
+}
+
+.intro_lead,
+.mission_copy > p:last-child,
+.archive_heading > p:last-child {
+    color: rgba(32, 29, 33, 0.66);
+    letter-spacing: 0;
+}
+
+.mission_panel,
+.content_sub .content_box {
+    background: #fffaf4;
+    border: 1px solid rgba(32, 29, 33, 0.1);
+    box-shadow: 0 18px 48px rgba(32, 29, 33, 0.045);
+}
+
+.mission_panel {
+    padding: 48px 52px;
+    gap: 48px;
+}
+
+.mission_copy h3 {
+    font-weight: 620;
+}
+
+.festival_values li,
+.festival_values li:first-child {
+    border-color: rgba(32, 29, 33, 0.12);
+}
+
+.festival_values strong,
+.history_item.now,
+.content_sub .content_box .info li h4 {
+    color: #51313a;
+}
+
+.festival_values span,
+.content_sub .content_box .info li p {
+    color: rgba(32, 29, 33, 0.72);
+}
+
+.history_prev,
+.history_next {
+    border-color: rgba(32, 29, 33, 0.16);
+    background: #fffaf4;
+    color: #51313a;
+}
+
+.history_prev:hover,
+.history_next:hover {
+    border-color: #51313a;
+    background: #51313a;
+    color: #fff7ef;
+}
+
+.history_item {
+    color: rgba(32, 29, 33, 0.38);
+    border-bottom-color: rgba(32, 29, 33, 0.14);
+}
+
+.history_item.now {
+    border-bottom-color: #743746;
+}
+
+.content_sub .content_box {
+    box-shadow: 0 22px 58px rgba(32, 29, 33, 0.06);
+}
+
+.content_sub .content_box > figure {
+    background: #161317;
+}
+
+.content_sub .content_box .text_box h3 {
+    font-weight: 560;
+}
+
+.content_sub .content_box .info li {
+    background: #f3ece3;
+    border-left-color: #743746;
+}
+
+.content_sub .content_box .info li figure {
+    background: #fffaf4;
+}
+
+.content_sub .content_box .info li figure img {
+    filter: brightness(0) saturate(100%) invert(24%) sepia(17%) saturate(1560%) hue-rotate(300deg) brightness(88%) contrast(88%);
+    opacity: 0.88;
+}
+
+#footer {
+    background: #201d21;
+    color: rgba(255, 247, 239, 0.72);
+}
+
+#footer .f_logo img {
+    filter: brightness(0) invert(1);
+    opacity: 0.92;
+}
+
+.f_links li a,
+.f_info p {
+    color: #fff7ef;
+}
+
+.f_info address {
+    color: rgba(255, 247, 239, 0.6);
+}
+
+@media (min-width: 1025px) {
+    header.container {
+        grid-template-columns: auto minmax(0, 1fr) auto !important;
+        column-gap: clamp(34px, 4vw, 70px) !important;
+        padding: 18px clamp(48px, 5vw, 88px) !important;
+        background: rgba(251, 247, 241, 0.98);
+        border-bottom: 1px solid rgba(32, 29, 33, 0.08);
+    }
+
+    header .topset {
+        grid-column: 3 !important;
+        grid-row: 1 !important;
+        justify-content: flex-end !important;
+    }
+
+    header h1 {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+    }
+
+    header h1 img {
+        max-height: 40px !important;
+    }
+
+    header nav {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        justify-self: center !important;
+    }
+
+    header nav .gnb {
+        justify-content: center !important;
+        gap: clamp(10px, 1.4vw, 26px) !important;
+    }
+
+    header nav .gnb li a {
+        color: rgba(32, 29, 33, 0.78);
+        font-size: 14px !important;
+        font-weight: 470;
+        letter-spacing: 0;
+    }
+
+    header nav .gnb li.current a,
+    header nav .gnb li a:hover {
+        color: #743746;
+    }
+
+    header .topset .login_box a {
+        color: rgba(32, 29, 33, 0.62);
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 640px) {
+    #hero_sub {
+        min-height: 450px;
+    }
+
+    #hero_sub .hero_inner {
+        width: calc(100% - 40px);
+        padding: 38px 0 44px;
+    }
+
+    #hero_sub h2 {
+        font-size: 28px;
+        line-height: 1.22;
+    }
+
+    .hero_desc br {
+        display: none;
+    }
+
+    #section_box_sub .container {
+        padding: 48px 20px 64px;
+    }
+
+    #section_box_sub nav .snb {
+        width: calc(100% - 40px);
+        padding: 18px 0 17px;
+        gap: 18px;
+    }
+
+    .mission_panel {
+        padding: 28px 22px;
+    }
+}
