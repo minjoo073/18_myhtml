@@ -1,13 +1,13 @@
 /* Sub page mood alignment */
 html,
 body {
-    background: #fbf7f1;
+    background: var(--paper);
 }
 
 #hero_sub {
     min-height: 510px;
-    color: #fff7ef;
-    background-color: #161317;
+    color: var(--cream);
+    background-color: var(--ink-deep);
     background-image:
         linear-gradient(90deg, rgba(22, 19, 23, 0.58) 0%, rgba(22, 19, 23, 0.26) 48%, rgba(22, 19, 23, 0.04) 100%),
         url("../images/festival-intro-hero.png");
@@ -37,9 +37,9 @@ body {
 
 #hero_sub h2 {
     max-width: 720px;
-    color: #fff7ef;
+    color: var(--cream);
     font-size: clamp(40px, 3.45vw, 54px);
-    font-weight: 660;
+    font-weight: 700;
     line-height: 1.12;
     letter-spacing: 0;
 }
@@ -51,7 +51,7 @@ body {
 }
 
 #section_box_sub {
-    background: #fbf7f1;
+    background: var(--paper);
 }
 
 #section_box_sub nav {
@@ -68,17 +68,17 @@ body {
 }
 
 #section_box_sub nav .snb li a {
-    color: #201d21;
+    color: var(--ink);
     border-bottom-color: rgba(32, 29, 33, 0.16);
 }
 
 #section_box_sub nav .snb li a::after {
-    background: #743746;
+    background: var(--wine);
 }
 
 #section_box_sub nav .snb small,
 .archive_label {
-    color: #743746;
+    color: var(--wine);
     letter-spacing: 0.13em;
 }
 
@@ -87,7 +87,7 @@ body {
 .archive_heading h2,
 .mission_copy h3,
 .content_sub .content_box .text_box h3 {
-    color: #201d21;
+    color: var(--ink);
     letter-spacing: 0;
 }
 
@@ -107,7 +107,7 @@ body {
 
 .intro_heading h2 {
     font-size: clamp(32px, 2.8vw, 40px);
-    font-weight: 640;
+    font-weight: 600;
 }
 
 .intro_lead,
@@ -119,7 +119,7 @@ body {
 
 .mission_panel,
 .content_sub .content_box {
-    background: #fffaf4;
+    background: var(--cream-2);
     border: 1px solid rgba(32, 29, 33, 0.1);
     box-shadow: 0 18px 48px rgba(32, 29, 33, 0.045);
 }
@@ -130,7 +130,7 @@ body {
 }
 
 .mission_copy h3 {
-    font-weight: 620;
+    font-weight: 600;
 }
 
 .festival_values li,
@@ -141,7 +141,7 @@ body {
 .festival_values strong,
 .history_item.now,
 .content_sub .content_box .info li h4 {
-    color: #51313a;
+    color: var(--wine-deep);
 }
 
 .festival_values span,
@@ -152,15 +152,15 @@ body {
 .history_prev,
 .history_next {
     border-color: rgba(32, 29, 33, 0.16);
-    background: #fffaf4;
-    color: #51313a;
+    background: var(--cream-2);
+    color: var(--wine-deep);
 }
 
 .history_prev:hover,
 .history_next:hover {
-    border-color: #51313a;
-    background: #51313a;
-    color: #fff7ef;
+    border-color: var(--wine-deep);
+    background: var(--wine-deep);
+    color: var(--cream);
 }
 
 .history_item {
@@ -169,7 +169,7 @@ body {
 }
 
 .history_item.now {
-    border-bottom-color: #743746;
+    border-bottom-color: var(--wine);
 }
 
 .content_sub .content_box {
@@ -177,20 +177,20 @@ body {
 }
 
 .content_sub .content_box > figure {
-    background: #161317;
+    background: var(--ink-deep);
 }
 
 .content_sub .content_box .text_box h3 {
-    font-weight: 560;
+    font-weight: 600;
 }
 
 .content_sub .content_box .info li {
     background: #f3ece3;
-    border-left-color: #743746;
+    border-left-color: var(--wine);
 }
 
 .content_sub .content_box .info li figure {
-    background: #fffaf4;
+    background: var(--cream-2);
 }
 
 .content_sub .content_box .info li figure img {
@@ -199,7 +199,7 @@ body {
 }
 
 #footer {
-    background: #201d21;
+    background: var(--ink);
     color: rgba(255, 247, 239, 0.72);
 }
 
@@ -210,7 +210,7 @@ body {
 
 .f_links li a,
 .f_info p {
-    color: #fff7ef;
+    color: var(--cream);
 }
 
 .f_info address {
@@ -255,13 +255,13 @@ body {
     header nav .gnb li a {
         color: rgba(32, 29, 33, 0.78);
         font-size: 14px !important;
-        font-weight: 470;
+        font-weight: 500;
         letter-spacing: 0;
     }
 
     header nav .gnb li.current a,
     header nav .gnb li a:hover {
-        color: #743746;
+        color: var(--wine);
     }
 
     header .topset .login_box a {

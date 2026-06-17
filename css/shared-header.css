@@ -11,8 +11,8 @@ header nav .gnb li a {
 
 header nav .gnb li.current a,
 header nav .gnb li a:hover {
-    color: #743746;
-    border-bottom-color: #743746;
+    color: var(--wine);
+    border-bottom-color: var(--wine);
 }
 
 .header-menu-toggle {
@@ -58,7 +58,7 @@ header nav .gnb li a:hover {
     header nav .gnb li a {
         padding: 9px 8px !important;
         font-size: 14px !important;
-        font-weight: 470 !important;
+        font-weight: 500 !important;
         white-space: nowrap !important;
     }
 
@@ -141,7 +141,7 @@ header nav .gnb li a:hover {
         display: block;
         width: 20px;
         height: 2px;
-        background: #3B1B47;
+        background: var(--plum);
         transition: transform 0.24s ease, opacity 0.2s ease;
     }
 

@@ -1,6 +1,7 @@
 /* Main page final section sizing */
 :root {
-    --main-frame: 1180px;
+    /* 유동 스케일: 1440 이하는 1180px 유지, 그 위부터 화면 따라 넓어져 1920에서 1500px */
+    --main-frame: clamp(1180px, 78vw, 1500px);
     --main-gutter: 40px;
     --main-bg: #fbf7f1;
 }
@@ -266,7 +267,7 @@ body,
 }
 
 #section01 .checks label {
-    font-size: 9px;
+    font-size: 13px;
     line-height: 1.45;
 }
 
@@ -573,8 +574,26 @@ body,
     height: 286px;
 }
 
+/* 와이드 화면: 모자이크를 프레임에 맞춰 비례 확대 (1600 기준 px=현행과 동일, 이후 vw로 스케일) */
+@media (min-width: 1600px) {
+    #section04 .content {
+        grid-template-columns: 17.25vw 17.25vw 11vw 23.5vw;
+        gap: 0.75vw;
+        max-width: none;
+    }
+    #section04 .content .card1 { height: 30.875vw; }
+    #section04 .content .card2 { height: 14.9375vw; }
+    #section04 .content .card3,
+    #section04 .content .card4,
+    #section04 .content .card5,
+    #section04 .content .card6 { height: 15.1875vw; }
+    #section04 .content .card7,
+    #section04 .content .card8,
+    #section04 .content .card9 { height: 17.875vw; }
+}
+
 #footer {
-    background: #201d21;
+    background: var(--ink);
     color: rgba(255, 247, 239, 0.72);
 }
 
@@ -590,7 +609,7 @@ body,
 
 #footer .f_links li a,
 #footer .f_info p {
-    color: #fff7ef;
+    color: var(--cream);
 }
 
 #footer .f_info address {
